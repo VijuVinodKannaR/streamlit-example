@@ -4,7 +4,7 @@ import subprocess
 def google_chrome():
     try:
         # Execute the PowerShell command to upgrade the application as admin
-        subprocess.run(["winget", "upgrade", "Chrome", "--disable-interactivity"], check=True)
+        subprocess.run(["cmd","winget", "upgrade", "Chrome", "--disable-interactivity"], check=True)
         st.success("Application updated successfully.")
     except subprocess.CalledProcessError as e:
         st.error(f"No New Updates Available")
