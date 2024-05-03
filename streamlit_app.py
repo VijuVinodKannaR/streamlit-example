@@ -4,7 +4,7 @@ import subprocess
 def google_chrome():
     try:
         # Execute the PowerShell command to upgrade the application as admin
-        subprocess.run(["cmd.exe","/c","winget", "upgrade", "Chrome", "--disable-interactivity"], check=True)
+        subprocess.run(["cmd.exe","/k","winget", "upgrade", "Chrome", "--disable-interactivity"], check=True)
         st.success("Application updated successfully.")
     except subprocess.CalledProcessError as e:
         st.error(f"No New Updates Available")
@@ -12,14 +12,14 @@ def google_chrome():
 def microsoft_edge():
     try:
         # Execute the PowerShell command to upgrade the application as admin
-        subprocess.run(["cmd.exe","/c","winget", "upgrade", "Edge", "--disable-interactivity"], check=True)
+        subprocess.run(["cmd.exe","/k","winget", "upgrade", "Edge", "--disable-interactivity"], check=True)
         st.success("Application updated successfully.")
     except subprocess.CalledProcessError as e:
         st.error(f"No New Updates Available")
 def microsoft_teams():
     try:
         # Execute the PowerShell command to upgrade the application as admin
-        subprocess.run(["cmd.exe","/c","winget", "upgrade", "Teams", "--disable-interactivity"], check=True)
+        subprocess.run(["cmd.exe","/k","winget", "upgrade", "Teams", "--disable-interactivity"], check=True)
         st.success("Application updated successfully.")
     except subprocess.CalledProcessError as e:
         st.error(f"No New Updates Available")
